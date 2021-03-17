@@ -1,0 +1,23 @@
+pm.test("Status code is 200", function() {
+     pm.expect(pm.response.code).to.equal(200);
+ });
+
+console.log(pm.response.headers.get("Content-Type"))
+ pm.test("response is json", function() {
+     pm.expect(pm.response.headers.get("Content-Type")).to.include("json");
+ });
+
+
+ pm.test("response resonse time", function() {
+     pm.expect(pm.response.responseTime).to.be.below(2000);
+ });
+
+
+console.log(pm.response.responseSize);
+ pm.test("response Size", function() {
+     pm.expect(pm.response.responseSize).to.be.below(204800);
+ });
+
+ 
+
+
