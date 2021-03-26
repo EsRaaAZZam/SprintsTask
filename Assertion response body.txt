@@ -1,0 +1,4 @@
+console.log(pm.response.json()['@context-Type'])
+
+
+console.log(pm.response.json().dataset[1218].title)	
